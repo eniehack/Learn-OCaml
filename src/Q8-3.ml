@@ -20,3 +20,5 @@ let ketsueki_hyouji person = match person with
 let test1 = ketsueki_hyouji person1 = "Aさんの血液型はB型です"
 let test2 = ketsueki_hyouji person2 = "Bさんの血液型はO型です"
 let test3 = ketsueki_hyouji person3 = "Cさんの血液型はA型です"
+
+let list = person1 :: person2 :: person3 :: []
