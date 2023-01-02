@@ -14,20 +14,10 @@ let person3 = {name="C"; height=180.0; weight=65.0; birthday="6/1"; blood_type="
 (* insert : person_t -> person_t list -> person_t list *)
 let rec insert person lst = match lst with
   [] -> person :: []
-  | ({name = first_name;
-      height = first_height;
-      weight = first_weight;
-      birthday = first_birthday;
-      blood_type = first_blood_type} as first) :: rest ->
-    match person with
-      {name = name;
-       height = height;
-       weight = weight;
-       birthday = birthday;
-       blood_type = blood_type} ->
-        if name <= first_name
-        then person :: first :: rest
-        else first :: insert person rest
+  | first :: rest ->
+      if person.name <= first.name
+      then person :: first :: rest
+      else first :: insert person rest
 
 let test1 = insert person1 [] = [person1]
 let test2 = insert person1 [person2] = [person1; person2]

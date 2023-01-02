@@ -18,12 +18,10 @@ let lst3 = [
 (* insert : gakusei_t -> gakusei_t list -> gakusei_t list *)
 let rec insert gakusei lst = match lst with
     [] -> gakusei :: []
-  | ({name = first_name; point = first_point; score = first_score} as first) :: rest ->
-    match gakusei with
-      {name = name; point = point; score = score} ->
-        if point <= first_point
-        then gakusei :: first :: rest
-        else first :: (insert gakusei rest)
+  | first :: rest ->
+      if gakusei.point <= first.point
+      then gakusei :: first :: rest
+      else first :: (insert gakusei rest)
 
 let test1 = insert {name = "asai"; point = 70; score = "B"} [] = lst2
 let test2 = insert {name = "asai"; point = 70; score = "B"} [
