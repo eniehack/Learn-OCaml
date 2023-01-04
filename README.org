@@ -1,0 +1,10 @@
+#+title: 『プログラミングの基礎』
+#+AUTHOR: Nakaya
+#+LANGUAGE: japanese
+
+浅井『プログラミングの基礎』の練習問題を置くリポジトリ。
+
+* 参考書籍
+
+SIST-02 で表記。
+- 浅井健一. プログラミングの基礎. サイエンス社, 2007, 270p., (Computer Science Library, 3).
